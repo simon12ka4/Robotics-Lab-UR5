@@ -3,14 +3,14 @@
 🤖 UR5 + Robotiq 2F85 - STUDENT TEMPLATE (BUILD YOUR ROBOT)
 ====================================================================
 Students will implement each section step-by-step:
-1️⃣ Setup GUI and Environment
-2️⃣ Load and Initialize Robot
-3️⃣ Identify Joints and Color Components
-4️⃣ Add Graspable Objects
-5️⃣ Create Control Sliders
-6️⃣ Setup Camera Views
-7️⃣ Implement Gripper Control
-8️⃣ Run Main Simulation Loop
+1. Setup GUI and Environment
+2. Load and Initialize Robot
+3. Identify Joints and Color Components
+4. Add Graspable Objects
+5. Create Control Sliders
+6. Setup Camera Views
+7. Implement Gripper Control
+8. Run Main Simulation Loop
 ====================================================================
 """
 
@@ -26,7 +26,7 @@ from pbsm import UR5_2F85   # Ensure the pbsm module is available
 matplotlib.use("TkAgg")
 
 # ---------------------------------------------------------------
-# 1️⃣ Connect to GUI
+# 1. Connect to GUI
 # ---------------------------------------------------------------
 def connect_to_gui():
     """Initialize PyBullet connection and world physics."""
@@ -35,7 +35,7 @@ def connect_to_gui():
 
 
 # ---------------------------------------------------------------
-# 2️⃣ Environment Setup
+# 2. Environment Setup
 # ---------------------------------------------------------------
 def setup_environment():
     """Load the ground plane and configure visualization."""
@@ -44,7 +44,7 @@ def setup_environment():
 
 
 # ---------------------------------------------------------------
-# 3️⃣ Load UR5 + 2F85 Robot
+# 3. Load UR5 + 2F85 Robot
 # ---------------------------------------------------------------
 def load_robot():
     """Load the robot URDF and initialize configuration."""
@@ -53,7 +53,7 @@ def load_robot():
 
 
 # ---------------------------------------------------------------
-# 4️⃣ Identify and Color Joints
+# 4. Identify and Color Joints
 # ---------------------------------------------------------------
 def identify_joints(robot_uid):
     """Inspect and color robot joints: red=actuators, blue=gripper, green=sensors."""
@@ -64,7 +64,7 @@ def identify_joints(robot_uid):
 
 
 # ---------------------------------------------------------------
-# 5️⃣ Add Graspable Objects
+# 5. Add Graspable Objects
 # ---------------------------------------------------------------
 def add_graspable_object(shape_type, color, pos, name="Object"):
     """Create simple objects (box, sphere, capsule) for grasping."""
@@ -73,7 +73,7 @@ def add_graspable_object(shape_type, color, pos, name="Object"):
 
 
 # ---------------------------------------------------------------
-# 6️⃣ Create Control Sliders
+# 6. Create Control Sliders
 # ---------------------------------------------------------------
 def create_sliders(arm_joints):
     """Create GUI sliders for manual joint and gripper control."""
@@ -82,7 +82,7 @@ def create_sliders(arm_joints):
 
 
 # ---------------------------------------------------------------
-# 7️⃣ Setup Cameras (2x2 AI Robot View)
+# 7. Setup Cameras (2x2 AI Robot View)
 # ---------------------------------------------------------------
 def setup_cameras():
     """Initialize four simulated camera views using matplotlib."""
@@ -91,7 +91,7 @@ def setup_cameras():
 
 
 # ---------------------------------------------------------------
-# 8️⃣ Gripper Control Functions
+# 8. Gripper Control Functions
 # ---------------------------------------------------------------
 def set_gripper_state(robot_uid, gripper_joints, gripper_value):
     """Move gripper joints based on slider input (0=open, 1=closed)."""
@@ -112,7 +112,7 @@ def check_gripper_contacts(robot_uid, gripper_joints, obj_id):
 
 
 # ---------------------------------------------------------------
-# 9️⃣ Main Simulation Loop
+# 9. Main Simulation Loop
 # ---------------------------------------------------------------
 def main():
     """Main control loop for robot and environment."""
@@ -130,4 +130,5 @@ def main():
 # ---------------------------------------------------------------
 if __name__ == "__main__":
     main()
+
 
