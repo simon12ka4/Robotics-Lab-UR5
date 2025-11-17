@@ -1,6 +1,6 @@
 """
 ====================================================================
-🤖 UR5 + Robotiq 2F85 - STUDENT TEMPLATE (BUILD YOUR ROBOT)
+UR5 + Robotiq 2F85 - STUDENT TEMPLATE (BUILD YOUR ROBOT)
 ====================================================================
 Students will implement each section step-by-step:
 1. Setup GUI and Environment
@@ -130,5 +130,6 @@ def main():
 # ---------------------------------------------------------------
 if __name__ == "__main__":
     main()
+
 
 
